@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+// creando mixin para diseñó responsive similar al media query
+@mixin telefono {
+    @media (min-width: $telefono) {
+        @content; // toma la inforcion de contenido que se quiera ajustar y toma la clase de donde se llamo el mixin
+    }
+}
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content; // toma la inforcion de contenido que se quiera ajustar y toma la clase de donde se llamo el mixin
+    }
+}
+@mixin pc {
+    @media (min-width: $desktop) {
+        @content; // toma la inforcion de contenido que se quiera ajustar y toma la clase de donde se llamo el mixin
+    }
+}
+
+// tablet

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "practica",
   "type": "module",
-  "description1": "script sasss compila automaticamente cada vez que se guarda un archivo en la carpeta scss, y crea el archivo compilado en dist/css --watch se usa para que ejecute continuamente el script",
+  "description1": "script sasss compila automaticamente cada vez que se guarda un archivo en la carpeta scss, y crea el archivo compilado en build/css --watch se usa para que ejecute continuamente el script",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

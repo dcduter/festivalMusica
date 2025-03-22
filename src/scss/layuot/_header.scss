@@ -1,0 +1,43 @@
+@use 'base/variables' as *;
+@use 'base/mixin' as m;
+.header {
+    background-color: $verde;
+  
+    .contenido-header {
+        padding: 2rem;
+        @include m.tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    h1 {
+        color: $blanco;
+        text-align: center;
+        @include m.tablet {
+            margin: 0;
+            text-align: left;
+        }
+    }
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    @include m.tablet{ // con @content toma los valores y la clase (.navegacion-principal)
+        flex-direction: row;// alinea los elementos de izquierda a dereacha
+    }
+
+    a {
+        color: $blanco;
+        font-size: 2.4rem;
+        &:hover {  // Pseudo Clase se use el & para quitar el espacio en app.css
+            color: $amarillo;
+        }
+    }
+}
+
+// los mixins se usan para reutilizar codigo y se usan con @include
