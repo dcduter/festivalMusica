@@ -1,0 +1,46 @@
+@use 'base/variables' as *;
+@use 'base/mixin' as m;
+@use 'sass:color';
+.video {
+    position: relative;// se usa para que se pueda ubicar cualquier cosa dentro de video
+    min-height: 50rem;
+    max-height: 80rem;
+    overflow: hidden; // se usa para ocultar los elementos que se salen de la caja
+    .overlay {
+        position: absolute;// se usa para colocar los elemtos que cualquier parte dentro de div video
+        background: linear-gradient(
+            270deg,
+            rgba($morado, 60%), // su funcion es para darle un color mas oscuro
+            rgba(color.adjust($morado, $lightness: -20%), 90%) // funcion es para darle un color mas oscuro, darken ya no funciona porque se usa la libreria sass
+        );
+        inset: 0;
+        display: flex;
+        align-items: center;
+    }
+    video {
+        display: block;
+        width: auto;
+        @include m.tablet {
+            width: 100%;
+        }
+    }
+
+}
+.contenido-video {
+    z-index: 10;// se usa para colocar los elemtos que cualquier parte dentro de div video
+    h2 {
+        color: $blanco;
+        font-size: 7rem;
+    }
+    p {
+        background-color: $rosa;
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin: 0;
+        color: $blanco;
+        font-size: 2.4rem;
+        font-weight: 700;
+
+    }
+}
+
