@@ -20,11 +20,18 @@
 @mixin contenedor {
     width: 95%;
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 0 auto; // se usa para centrar el contenido
 }
 // mixin para grid
 @mixin grid($columnas: 1, $espaciado: 4rem) {// columnas y espaciado se pasan como argumentos al llamar el mixin  
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+/* mixin para resetear la lista */
+@mixin resetear-lista {
+    margin: 0; // se usa para quitar los espacios entre los elementos de una lista
+    padding: 0; // se utiliza para quitar los espacios entre los elementos de una lista
+    list-style: none;// se usa para quitar el punto de la lista
 }
