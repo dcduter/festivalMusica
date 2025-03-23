@@ -17,4 +17,14 @@
     }
 }
 
-// tablet
+@mixin contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+// mixin para grid
+@mixin grid($columnas: 1, $espaciado: 4rem) {// columnas y espaciado se pasan como argumentos al llamar el mixin  
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}

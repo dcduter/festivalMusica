@@ -1,0 +1,27 @@
+@use 'base/variables' as *;
+@use 'base/mixin' as m;
+
+.sobre-festival {
+    @include m.contenedor;
+    @include m.tablet {
+        @include m.grid(2, 4rem);
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // column-gap: 4rem;
+        // align-items: center;
+    }
+
+}
+
+.contenido-festival {
+    margin-top: 5rem;
+    h2 {
+        margin: 2rem;
+        margin-top: 3rem;
+    }
+    .fecha {
+        color: $verde;
+        font-weight: 700;
+    }
+
+}

@@ -13,7 +13,7 @@
             rgba($morado, 60%), // su funcion es para darle un color mas oscuro
             rgba(color.adjust($morado, $lightness: -20%), 90%) // funcion es para darle un color mas oscuro, darken ya no funciona porque se usa la libreria sass
         );
-        inset: 0;
+        inset: 0;// se use para dar 0 en margen de todo el div
         display: flex;
         align-items: center;
     }
