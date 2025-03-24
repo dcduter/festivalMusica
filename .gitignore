@@ -1,6 +1,13 @@
-# Archivos del sistema operativo
-Thumbs.db
-desktop.ini
+# Carpetas de dependencias
+node_modules/
+
+# Carpetas de compilación
+build/
+
+# Archivos de configuración local
+.env
+config.json
+secrets.json
 
 # Archivos de registro y temporales
 *.log
@@ -8,44 +15,9 @@ desktop.ini
 *.swp
 *.swo
 
-# Archivos de configuración local
-.env
-config.json
-secrets.json
+# Archivos de compilación de Sass (CSS)
+src/scss/**/*.css
 
-# Archivos de configuración de IDE
+# Otros archivos
 .vscode/
 .idea/
-
-
-# Archivos de compilación y salida
-/build
-/dist
-/tmp
-.sass-cache
-*.css
-*.js
-*.map
-# Archivos generados por Gulp
-dist/
-build/
-.tmp/
-.sass-cache/
-.DS_Store # Archivos de macOS
-node_modules/ 
-# Dependencias de Node.js
-npm-debug.log* 
-# Logs de npm
-yarn-debug.log* 
-# Logs de yarn
-yarn-error.log* 
-# Errores de yarn
-
-# Archivos compilados de Sass (CSS)
-*.css
-*.css.map
-
-# Otros archivos temporales o de configuración
-.env
-config.json
-*.log
