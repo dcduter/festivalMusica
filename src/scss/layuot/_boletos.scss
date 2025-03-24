@@ -1,0 +1,87 @@
+@use 'base/variables' as *;
+@use 'base/mixin' as m;
+@use 'sass:color';
+.contenedor-boletos {
+    background-color: $verde;
+    h3 {
+        color: $blanco;
+    }
+   .boletos {
+        @include m.contenedor; // defiene los establecidos en el mixin
+        @include m.tablet {
+            @include m.grid(2);
+        }
+    }
+}
+
+.pase {
+    &:hover {
+        transform: scale(1.1);
+        transition: transform .3s ease-in-out; // al pasar el cursor se amplia un 10%
+
+    }
+    &-nombre { // el & permite usar el selector de la clase padre para que en el app.css se pueda usar el selector .pase-nombre
+        font-size: 3.5rem;
+        text-align: center;
+        color: $blanco;
+        font-weight: 900;
+
+    }
+    &-header,
+    &-footer {
+        padding: .3rem;
+        p {
+            text-align: center;
+            color: $blanco;
+            margin: 0;
+        }
+    }
+    &-header {
+        background-color: $rosa;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    &-footer {
+        background-color: $blanco;
+        padding: 3rem;
+        p {
+            background-color: $morado;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        font-weight: 900;
+        font-size: 2.5rem;
+        cursor: pointer;       
+        &:hover{
+            background-color: color.adjust($morado, $lightness: -10%); // con $lightness aclara el color
+            transition: background-color .3s ease-in-out;
+        }
+        }
+    }
+    &-body {
+        background-color: $blanco;
+        padding: 1rem;
+        ul {
+            @include m.resetear-lista;
+            li {
+                padding: 1rem;
+                border-bottom: 1px solid $morado;
+            }
+        }
+    }
+}
+
+
+/* ------------------------------footer------------------------------- */
+.footer-fin {
+    padding: 2rem;
+    background-color: $rosa;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    p {
+        color: $blanco;
+        margin: 0;
+    }
+}
